@@ -1,0 +1,11 @@
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin response{
+    @media screen and (max-width: 430px){
+        @content;
+    }
+}

@@ -1,0 +1,151 @@
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+
+//Colocar estilo nas classes so sr
+//visibility: hidden;
+
+.header-profile {
+    @include flexCenter;
+    flex-flow: column;
+    margin: 30px 0 0 0;
+
+    &__image {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 5px solid $blue;
+        padding: 3px;
+        transition: .4s;
+
+        &:hover {
+            border: 5px solid $orange;
+        }
+    }
+
+    &__name {
+        font-weight: bold;
+        font-size: 25px;
+        margin: 15px 0 0 0;
+    }
+
+    &__user {
+        font-size: 20px;
+        margin: 10px 0 0 0;
+    }
+}
+
+main {
+    @extend .header-profile;
+    margin: 15px 0 0 0;
+
+    .social-network {
+        @include flexCenter;
+        position: relative;
+        padding: 12px 0;
+        margin: 10px 0 10px 0;
+        width: 70%;
+        font-size: 20px;
+        color: $black;
+        border: 1px solid $blue;
+        border-radius: 10px;
+        gap: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: $blue;
+            transition: all .5s;
+            z-index: -1;
+        }
+
+        &_effect {
+            &::before {
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform .5s ease;
+            }
+
+            &:hover {
+                &::before {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
+            }
+
+            &:focus {
+                &::before {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
+            }
+        }
+
+        &__linkedin {
+            &::before {
+                background-image: linear-gradient(45deg, #0066ff, #00ccff);
+            }
+        }
+
+        &__github {
+            &::before {
+                background-image: linear-gradient(45deg, $gray, $off-white);
+            }
+        }
+
+        &__instagram {
+            border: 1px solid $pink;
+            &::before {
+                background-image: linear-gradient(45deg, #d0ff00, #fcc100, #e60000, #cc00ff, #2c00cc);
+            }
+        }
+    }
+
+    .curriculum {
+        border: 1px solid $orange;
+        &::before {
+            background-color: $orange;
+        }
+    }
+}
+
+footer {
+    @include flexCenter;
+    margin: 30px 0 0 0;
+    @include response{
+        width: 60%;
+        left: 70px;
+        position: relative;
+    }
+    p {
+        @include flexCenter;
+        text-align: justify;
+        color: $black;
+        padding: 10px 25px;
+        ::after {
+            content: "";
+            width: 1px;
+            height: 95%;
+            border-right: 2px solid $black;
+            animation: blink 1s infinite;
+        }
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
