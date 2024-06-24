@@ -7,12 +7,55 @@
 
 body {
   background-color: #f5f5f5;
+  transition: 0.5s all;
 }
 body a {
   text-decoration: none;
 }
 body li {
   list-style: none;
+}
+body.dark-theme {
+  background-color: #000c18;
+  color: #f5f5f5;
+  transition: 0.5s all;
+}
+body.dark-theme .header-profile .nav, body.dark-theme main .nav {
+  color: #f5f5f5;
+}
+body.dark-theme .header-profile .nav__logo img, body.dark-theme main .nav__logo img {
+  box-shadow: 0 0 10px 5px #ff3b0a;
+}
+body.dark-theme .header-profile .nav__logo img:hover, body.dark-theme main .nav__logo img:hover {
+  box-shadow: 0 0 10px 5px #0086df;
+}
+body.dark-theme .header-profile__image {
+  border: 5px solid #ff3b0a;
+  box-shadow: 0 0 10px 5px #ff3b0a;
+}
+body.dark-theme .header-profile__image:hover {
+  border: 5px solid #0086df;
+  box-shadow: 0 0 15px 0px #0086df;
+}
+body.dark-theme main .social-network {
+  border: 3px solid #ff3b0a;
+  color: #f5f5f5;
+}
+body.dark-theme main .social-network:hover {
+  background-color: #ff3b0a;
+  box-shadow: 0 0 10px 5px #ff3b0a;
+}
+
+.container {
+  max-width: 968px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+@media screen and (min-width: 992px) {
+  .container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 
 .header-profile, main {
@@ -22,21 +65,39 @@ body li {
   flex-flow: column;
   margin: 30px 0 0 0;
 }
+.header-profile .nav, main .nav {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.header-profile .nav__logo img, main .nav__logo img {
+  height: 50px;
+  border-radius: 10px;
+  transition: 0.5s all;
+  box-shadow: 0 0 10px #0086df;
+}
+.header-profile .nav__logo img:hover, main .nav__logo img:hover {
+  box-shadow: 0 0 10px 5px #ff3b0a;
+}
 .header-profile__image {
   height: 150px;
   width: 150px;
   border-radius: 50%;
   border: 5px solid #0086df;
+  box-shadow: 0 0 10px 0px #0086df;
   padding: 3px;
-  transition: 0.4s;
+  transition: 0.5s all;
 }
 .header-profile__image:hover {
   border: 5px solid #ff3b0a;
+  box-shadow: 0 0 15px 5px #ff3b0a;
 }
 .header-profile__name {
   font-weight: bold;
   font-size: 25px;
-  margin: 15px 0 0 0;
+  margin: 25px 0 0 0;
 }
 .header-profile__user {
   font-size: 20px;
@@ -56,56 +117,22 @@ main .social-network {
   width: 70%;
   font-size: 20px;
   color: #000;
-  border: 1px solid #0086df;
+  border: 3px solid #0086df;
   border-radius: 10px;
   gap: 10px;
   cursor: pointer;
   text-decoration: none;
   overflow: hidden;
+  transition: 0.5s all !important;
 }
-main .social-network::before {
-  content: "";
-  height: 100%;
-  width: 100%;
-  position: absolute;
+main .social-network:hover {
   background-color: #0086df;
-  transition: all 0.5s;
-  z-index: -1;
+  box-shadow: 0 0 10px 5px #0086df;
 }
-main .social-network_effect::before {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s ease;
-}
-main .social-network_effect:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-main .social-network_effect:focus::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-main .social-network__linkedin::before {
-  background-image: linear-gradient(45deg, #0066ff, #00ccff);
-}
-main .social-network__github::before {
-  background-image: linear-gradient(45deg, #b1b1b1, #f5f5f5);
-}
-main .social-network__instagram {
-  border: 1px solid #cc00ff;
-}
-main .social-network__instagram::before {
-  background-image: linear-gradient(45deg, #d0ff00, #fcc100, #e60000, #cc00ff, #2c00cc);
-}
-main .curriculum {
-  border: 1px solid #ff3b0a;
-}
-main .curriculum::before {
-  background-color: #ff3b0a;
+main .social-network__text {
+  font-size: 20px;
+  font-weight: 400;
+  width: 80px;
 }
 
 footer {
@@ -121,28 +148,14 @@ footer {
     position: relative;
   }
 }
-footer p {
+footer .footer__copyright {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: justify;
-  color: #000;
-  padding: 10px 25px;
-}
-footer p ::after {
-  content: "";
-  width: 1px;
-  height: 95%;
-  border-right: 2px solid #000;
-  animation: blink 1s infinite;
-}
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  gap: 5px;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */

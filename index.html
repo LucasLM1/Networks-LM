@@ -25,30 +25,57 @@
 </head>
 <body>
     <header class="header-profile">
+
+        <nav class="nav">
+            <a href="#" class="nav__logo">
+                <img src="./assets/images/LM-icon.jpg" alt="Logotipo LM"/>
+            </a>
+
+            <i class='bx bx-moon change-theme' id="theme-button"></i>
+        </nav>
         <img class="header-profile__image" src="./assets/images/profile-image.jpg" alt="Imagem de perfil">
         <h1 class="header-profile__name">Lucas M. Souza | LM</h1>
         <p class="header-profile__user">@lucxs.lm_</p>
     </header>
 
-    <main>
+    <main class="container">
         <a class="social-network social-network__linkedin social-network_effect" href="https://www.linkedin.com/in/lucaslmsc/" target="_blank">
-            <box-icon name='linkedin-square' type='logo' animation='tada' ></box-icon>
-            LinkedIn
+            <i class='bx bxl-instagram'></i>
+            <h2 class="social-network__text">
+                LinkedIn
+            </h2>
         </a>
 
         <a class="social-network social-network__github social-network_effect" href="https://github.com/LucasLM1" target="_blank">
-            <box-icon name='github' type='logo' animation='tada' ></box-icon>
-            GitHub
+            <i class='bx bxl-github' ></i>
+            <h2 class="social-network__text">
+                GitHub
+            </h2>
         </a>
 
         <a class="social-network social-network__instagram social-network_effect" href="https://www.instagram.com/lucxs.lm_/" target="_blank">
-            <box-icon name='instagram' type='logo' animation='tada' ></box-icon>
-            Instagram
+            <i class='bx bxl-linkedin' ></i>
+            <h2 class="social-network__text">
+                Instagram
+            </h2>
+        </a>
+
+        <a class="social-network social-network_portfolio social-network_effect" href="https://lucaslm.netlify.app/" target="_blank">
+            <i class='bx bx-desktop' ></i>
+            <h2 class="social-network__text">
+                Portfolio
+            </h2>
         </a>
     </main>
 
-    <footer>
-        <p data-js="typing"></p>
+    <footer class="container footer">
+        <!-- <p data-js="typing"></p> -->
+        <h3 class="footer__copyright">
+            Desenvolvido por: 
+            <strong>
+                Lucas M. Souza | LM
+            </strong>
+        </h3>
     </footer>
     <script src="./assets/js/script.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>

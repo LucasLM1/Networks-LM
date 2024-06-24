@@ -9,10 +9,65 @@
 
 body{
     background-color: $off-white;
+    transition: .5s all;
     a{
         text-decoration: none;
     }
     li{
         list-style: none;
+    }
+
+    &.dark-theme{
+        background-color: #000c18;
+        color: $off-white;;
+        transition: .5s all;
+
+        .header-profile{
+            .nav{
+                color: $off-white;
+                &__logo{
+                    img{
+                        box-shadow: 0 0 10px 5px $orange;
+
+                        &:hover{
+                            box-shadow: 0 0 10px 5px $blue;
+                        }
+                    }
+                }
+            }
+
+            &__image{
+                border: 5px solid $orange;
+                box-shadow: 0 0 10px 5px $orange;
+
+                &:hover {
+                    border: 5px solid $blue;
+                    box-shadow: 0 0 15px 0px $blue;
+
+                }
+            }
+        }
+
+        main{
+            .social-network{
+                border: 3px solid $orange;
+                color: $off-white;
+                
+                &:hover{
+                    background-color: $orange;
+                    box-shadow: 0 0 10px 5px $orange;
+                }
+            }
+        }
+    }
+}
+
+.container {
+    max-width: 968px;
+    margin-left: 16px;
+    margin-right: 16px;
+    @include pc{
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
