@@ -27,10 +27,10 @@ const elements = [
     document.querySelector('header'),
     document.querySelector('footer'),
     
-    document.querySelector('.social-network__linkedin'),
-    document.querySelector('.social-network__github'),
-    document.querySelector('.social-network__instagram'),
-    document.querySelector('.social-network_portfolio')
+    document.querySelector('.LM1'),
+    document.querySelector('.LM2'),
+    document.querySelector('.LM3'),
+    document.querySelector('.LM4')
 ]
 
 var cascading = {
@@ -41,19 +41,19 @@ var cascading = {
 
 sr.reveal(elements, cascading);
 
-sr.reveal('.social-network__linkedin',{
+sr.reveal('.LM1',{
     delay: 1000,
 })
 
-sr.reveal('.social-network__github',{
+sr.reveal('.LM2',{
     delay: 1500,
 })
 
-sr.reveal('.social-network__instagram',{
+sr.reveal('.LM3',{
     delay: 2000
 })
 
-sr.reveal('.social-network__portfolio',{
+sr.reveal('.LM4',{
     delay: 2500
 })
 

@@ -58,6 +58,12 @@ body.dark-theme main .social-network:hover {
   }
 }
 
+.change-theme {
+  font-size: 1.71rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
 .header-profile, main {
   display: flex;
   justify-content: center;
@@ -112,18 +118,16 @@ main .social-network {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 12px 0;
-  margin: 10px 0 10px 0;
-  width: 70%;
+  width: 100%;
+  height: 70px;
   font-size: 20px;
   color: #000;
-  border: 3px solid #0086df;
   border-radius: 10px;
   gap: 10px;
   cursor: pointer;
   text-decoration: none;
   overflow: hidden;
-  transition: 0.5s all !important;
+  transition: 0.5s all;
 }
 main .social-network:hover {
   background-color: #0086df;
@@ -133,6 +137,23 @@ main .social-network__text {
   font-size: 20px;
   font-weight: 400;
   width: 80px;
+}
+main .social-network__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 0 10px 0;
+  width: 70%;
+  height: 70px;
+  font-size: 20px;
+  color: #000;
+  border: 3px solid #0086df;
+  border-radius: 10px;
+  gap: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
 }
 
 footer {
