@@ -57,6 +57,16 @@ body{
                     background-color: $orange;
                     box-shadow: 0 0 10px 5px $orange;
                 }
+
+                &__links{
+                    border: 3px solid $orange;
+                    color: $off-white;
+                    
+                    &:hover{
+                        background-color: $orange;
+                        box-shadow: 0 0 10px 5px $orange;
+                    }
+                }
             }
         }
     }
