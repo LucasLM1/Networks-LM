@@ -50,7 +50,7 @@ body{
 
         main{
             .social-network{
-                border: 3px solid $orange;
+                // border: 3px solid $orange;
                 color: $off-white;
                 
                 &:hover{
@@ -62,10 +62,10 @@ body{
                     border: 3px solid $orange;
                     color: $off-white;
                     
-                    &:hover{
-                        background-color: $orange;
-                        box-shadow: 0 0 10px 5px $orange;
-                    }
+                    // &:hover{
+                    //     background-color: $orange;
+                    //     box-shadow: 0 0 10px 5px $orange;
+                    // }
                 }
             }
         }
